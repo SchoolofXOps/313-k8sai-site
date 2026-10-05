@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_313_k8sai_site=self.webpackChunk_313_k8sai_site||[]).push([["6762"],{9470(e,s,c){c.d(s,{createArchitectureServices:()=>i.S});var i=c(5796);c(4954)}}]);
