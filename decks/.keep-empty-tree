@@ -1,0 +1,8 @@
+This directory must exist in git before 02-13 ships `00-smoke.html` into it.
+
+Two checkers declare `site/static/decks` as a scan root (C13 in 02-07, C2 in 02-07, C11 in 02-13).
+A root that does not exist throws ENOENT and exits 2 — so a fresh clone would report the gate as
+BROKEN rather than clean, which is the opposite of the fail-open this phase closes but still wrong.
+Named after its reason, like `__fixtures__/_scan/empty/.keep-empty-tree`, so a later reader does
+not tidy it away. Its extension is absent from SCAN_EXTENSIONS, so the directory exists in git
+while the scan legitimately finds nothing in it.
